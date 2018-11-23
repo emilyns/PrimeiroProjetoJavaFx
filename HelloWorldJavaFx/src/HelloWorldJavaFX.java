@@ -1,7 +1,8 @@
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
 /**
@@ -16,12 +17,15 @@ public class HelloWorldJavaFX extends Application{
     @Override
     public void start(Stage palco){
         //Personagem
-      Label texto = new Label("Último dia de aula");
+      Rectangle ceu = new Rectangle(900, 450);
+      Rectangle mar = new Rectangle(900, 450);
+      Circle sol = new Circle(90);
+      
         //história
       StackPane historia = new StackPane();
-      historia.getChildren().add(texto);
+      historia.getChildren().addAll(ceu, sol, mar);
         //cena
-      Scene cena = new Scene(historia, 300, 300);
+      Scene cena = new Scene(historia, 900, 900);
         //colocando a cena no Palco
       palco.setScene (cena);
       palco.show();
